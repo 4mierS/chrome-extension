@@ -14,7 +14,7 @@
 	},
 	"background": {
 		"scripts": ["dist/background.js"],
-		"persostent": false,
+		"persostent": false
 	},
 	"permissions": [
 		"storage",
