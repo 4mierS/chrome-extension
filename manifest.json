@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "SafeIt4Later",
+	"version" : "1.0",
+	"description": "That is an extension for saving data of the internet with smart filter",
+	"icons": {
+		"128": "icons/icon128.png",
+		"48": "icons/icon48.png",
+		"16": "icons/icon16.jpg"
+	},
+	"browser_action": {
+		"default_icon": "icons/icon16.jpg",
+		"default_popup": "dist/popup_html"
+	},
+	"background": {
+		"scripts": ["dist/background.js"],
+		"persostent": false,
+	},
+	"permissions": [
+		"storage",
+		"activeTab"
+		]
+	}
+}
