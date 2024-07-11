@@ -1,1 +1,19 @@
-(()=>{"use strict";chrome.runtime.onInstalled.addListener((()=>{console.log("Extension installed")})),chrome.runtime.onMessage.addListener(((e,s,t)=>{if("saveSelection"===e.action)return chrome.storage.local.get({selections:[]},(s=>{const o=s.selections;o.push(e.data),chrome.storage.local.set({selections:o},(()=>{console.log("Selection saved:",e.data),t({status:"success"})}))})),!0}))})();
+"use strict";
+chrome.runtime.onInstalled.addListener(() => {
+    console.log('Extension installed');
+});
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.action === 'saveSelection') {
+        // Daten speichern
+        chrome.storage.local.get({ selections: [] }, (result) => {
+            const selections = result.selections;
+            selections.push(message.data);
+            chrome.storage.local.set({ selections: selections }, () => {
+                console.log('Selection saved:', message.data);
+                sendResponse({ status: 'success' });
+            });
+        });
+        return true; // Gibt an, dass sendResponse asynchron ist
+    }
+});
+//# sourceMappingURL=background.js.map

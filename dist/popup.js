@@ -1,1 +1,11 @@
-(()=>{"use strict";document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("displayArea");e&&chrome.storage.local.get({selections:[]},(t=>{const n=t.selections;e.innerHTML=n.join("<br>")}))}))})();
+"use strict";
+document.addEventListener('DOMContentLoaded', () => {
+    const displayArea = document.getElementById('displayArea');
+    if (displayArea) {
+        chrome.storage.local.get({ selections: [] }, (result) => {
+            const selections = result.selections;
+            displayArea.innerHTML = selections.join('<br>');
+        });
+    }
+});
+//# sourceMappingURL=popup.js.map
