@@ -1,6 +1,1 @@
-"use strict";
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Popup loaded');
-    // Weitere Logik hier hinzufügen
-});
-//# sourceMappingURL=popup.js.map
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("displayArea");e&&chrome.storage.local.get({selections:[]},(t=>{const n=t.selections;e.innerHTML=n.join("<br>")}))}))})();

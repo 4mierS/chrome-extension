@@ -1,0 +1,1 @@
+(()=>{"use strict";document.addEventListener("mouseup",(()=>{var e;const t=null===(e=window.getSelection())||void 0===e?void 0:e.toString().trim();t&&chrome.runtime.sendMessage({action:"saveSelection",data:t})}))})();

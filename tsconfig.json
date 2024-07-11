@@ -1,12 +1,12 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist",
-      "sourceMap": true,
-      "strict": true,
-      "target": "es6",
-      "module": "commonjs",
-      "lib": ["dom", "es6"],
-      "types": ["chrome"]
-    },
-    "include": ["src"]
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["dom", "es6"],
+    "types": ["chrome"]
+  },
+  "include": ["src"]
 }
