@@ -1,4 +1,8 @@
 document.addEventListener('mouseup', () => {
+  if (window.getSelection()?.empty) {
+    console.log('No text selected');
+    return;
+  }
   const selectedText = window.getSelection()?.toString().trim();
   console.log('Selected text:', selectedText);
   if (selectedText && selectedText.length > 0) {
