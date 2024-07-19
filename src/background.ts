@@ -17,17 +17,3 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-
-// Function to delete data from local storage
-function deleteData() {
-  chrome.storage.local.remove('selections', function() {
-      if (chrome.runtime.lastError) {
-          console.error('Error removing data:', chrome.runtime.lastError);
-      } else {
-          console.log('Data removed successfully');
-      }
-  });
-}
-
-// Call the function to delete the data
-
