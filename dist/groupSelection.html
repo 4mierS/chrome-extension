@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Select Group</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .group {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Select Group</h1>
+  <div class="group">
+    <button onclick="saveInGroup('Group 1')">Group 1</button>
+  </div>
+  <script>
+    //TODO: Implement createGroup
+    function createGroup() {
+      console.log('Create Group');
+    }
+    
+    //TODO: Implement saveInGroup
+    function saveInGroup(group) {
+      chrome.runtime.sendMessage({ action: 'saveGroup', group: group }, (response) => {
+        console.log('Response from background script:', response);
+        window.close();
+      });
+    }
+  </script>
+</body>
+</html>
